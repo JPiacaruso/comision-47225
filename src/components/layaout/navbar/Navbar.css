@@ -1,0 +1,9 @@
+.navbarLogo {
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.MuiBox-root {
+  display: flex;
+  justify-content: space-around;
+}
