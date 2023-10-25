@@ -10,24 +10,17 @@ import ItemListContainer from "./components/pages/itemListContainer/ItemListCont
 // import { useState } from "react";
 import ItemDetailContainer from "./components/pages/itemDetailContainer/ItemDetailContainer";
 import Cart from "./components/pages/cart/Cart";
+import AppRouter from "./router/AppRouter";
+import CartContextComponent from "./context/CartContext";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <ThemeProvider theme={customTheme}>
-          <Routes>
-            <Route element={<Layout />}>
-              <Route path="/" element={<ItemListContainer />} />
-              <Route
-                path="/category/:categoryName"
-                element={<ItemListContainer />}
-              />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
-              <Route path="*" element={<h1>Página no encontrada</h1>} />
-            </Route>
-          </Routes>
+          <CartContextComponent>
+            <AppRouter />
+          </CartContextComponent>
         </ThemeProvider>
       </BrowserRouter>
     </>

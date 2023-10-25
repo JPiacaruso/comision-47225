@@ -1,5 +1,4 @@
 import "./Footer.css";
-import { Outlet } from "react-router-dom";
 import * as React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";

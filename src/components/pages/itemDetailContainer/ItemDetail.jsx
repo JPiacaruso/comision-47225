@@ -2,7 +2,7 @@ import CounterContainer from "../../common/counter/CounterContainer";
 import { Box } from "@mui/material";
 import "./itemDetail.css";
 
-export const ItemDetail = ({ productSelected, onAdd }) => {
+export const ItemDetail = ({ productSelected, onAdd, initial }) => {
   return (
     <Box
       height={450}
@@ -32,12 +32,17 @@ export const ItemDetail = ({ productSelected, onAdd }) => {
         alignItems={"center"}
         margin={7}
       >
+        <h3> ya tienes {initial} en el carrito </h3>
         <h2>{productSelected.title}</h2>
         <h4>{productSelected.description}</h4>
         <h4> ${productSelected.price}.-</h4>
       </Box>
       <Box>
-        <CounterContainer stock={productSelected.stock} onAdd={onAdd} />
+        <CounterContainer
+          stock={productSelected.stock}
+          onAdd={onAdd}
+          initial={initial}
+        />
       </Box>
     </Box>
   );

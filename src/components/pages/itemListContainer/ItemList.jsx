@@ -1,7 +1,5 @@
-import { Grid } from "@mui/material";
 import ProductCard from "../../common/productCard/ProductCard";
 import "../itemListContainer/ItemList.css";
-import { Height } from "@mui/icons-material";
 
 const ItemList = ({ items }) => {
   // console.log(items[0]?.title);

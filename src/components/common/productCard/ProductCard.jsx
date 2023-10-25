@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
-import { red } from "@mui/material/colors";
 
 const ProductCard = ({ item }) => {
   return (
