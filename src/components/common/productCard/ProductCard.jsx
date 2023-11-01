@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Card,
   CardActions,
@@ -43,11 +42,17 @@ const ProductCard = ({ item }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Link to={`/itemDetail/${item.id}`}>
-          <Button size="small" variant="outlined">
-            Ver Mas
+        {item.stock > 0 ? (
+          <Link to={`/itemDetail/${item.id}`}>
+            <Button size="small" variant="outlined">
+              Ver Mas
+            </Button>
+          </Link>
+        ) : (
+          <Button variant="contained" disabled>
+            Sin Stock
           </Button>
-        </Link>
+        )}
       </CardActions>
     </Card>
   );

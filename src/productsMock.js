@@ -1,6 +1,5 @@
 export const products = [
   {
-    id: 1,
     title: "Ceramica de Tierra Torneada",
     price: 24000,
     stock: 6,
@@ -10,17 +9,15 @@ export const products = [
     img: "https://res.cloudinary.com/dwxhsdpc7/image/upload/v1696869835/tom-crew-E64Hv5Ab_nQ-unsplash_uyfpiu.jpg",
   },
   {
-    id: 2,
     title: "Cerámica Blanca",
     price: 18000,
     stock: 3,
     description:
       "Nuestra cerámica blanca es elegante y versátil. Perfecta para combinar con cualquier estilo de decoración, esta colección ofrece piezas limpias y atemporales para tu hogar.",
-    category: "ceramica blanca",
+    category: "ceramicaBlanca",
     img: "https://res.cloudinary.com/dwxhsdpc7/image/upload/v1696869464/paul-hanaoka-JMwcTFlU39Q-unsplash_fisjaz.jpg",
   },
   {
-    id: 3,
     title: "Ceramica Madera Nórdica",
     price: 16000,
     stock: 7,
@@ -30,7 +27,6 @@ export const products = [
     img: "https://res.cloudinary.com/dwxhsdpc7/image/upload/v1696869560/nordwood-themes-SM3hDC6phTM-unsplash_ipuqqr.jpg",
   },
   {
-    id: 4,
     title: "Ceramica de Porcelana",
     price: 12000,
     stock: 3,
@@ -40,7 +36,6 @@ export const products = [
     img: "https://res.cloudinary.com/dwxhsdpc7/image/upload/v1696869238/vladimir-gladkov-NPPIq1XFdck-unsplash_uz81da.jpg",
   },
   {
-    id: 5,
     title: "Ceramica con Relieve de Autor",
     price: 19000,
     stock: 3,
@@ -50,7 +45,6 @@ export const products = [
     img: "https://res.cloudinary.com/dwxhsdpc7/image/upload/v1696869037/katja-vogt-CipURjPCXOo-unsplash_zruxuh.jpg",
   },
   {
-    id: 6,
     title: "Jarrones de Arcilla",
     price: 24000,
     stock: 4,
@@ -60,7 +54,6 @@ export const products = [
     img: "https://res.cloudinary.com/dwxhsdpc7/image/upload/v1696869738/yana-hurska-zeGT9j4ltRA-unsplash_qrkl3t.jpg",
   },
   {
-    id: 7,
     title: "Figurilla en Cerámica Negra",
     price: 26000,
     stock: 3,
@@ -70,7 +63,6 @@ export const products = [
     img: "https://res.cloudinary.com/dwxhsdpc7/image/upload/v1697462169/art-deco-unsplash_scyeqw.jpg",
   },
   {
-    id: 8,
     title: "Plato de Ceramica Rojo Rústico",
     price: 18000,
     stock: 5,
@@ -80,7 +72,6 @@ export const products = [
     img: "https://res.cloudinary.com/dwxhsdpc7/image/upload/v1697462170/art-deco2-unsplash_g3afdn.jpg",
   },
   {
-    id: 9,
     title: "Porta Macetas de Cerámica (Juego x 2)",
     price: 21000,
     stock: 3,
@@ -90,7 +81,6 @@ export const products = [
     img: "https://res.cloudinary.com/dwxhsdpc7/image/upload/v1697462169/art-deco4-unsplash_aui2y8.jpg",
   },
   {
-    id: 10,
     title: "Jarrón de cerámica Blanca y Marrón",
     price: 24000,
     stock: 7,
