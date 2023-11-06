@@ -1,8 +1,15 @@
-# React + Vite
+# Bienvenido/a a Piantao Cerámicas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![](https://res.cloudinary.com/dwxhsdpc7/image/upload/t_Piantao-Resize-Logo/v1696863121/Piantao_Logo1_e1ps3h.png)
 
-Currently, two official plugins are available:
+## Mi ecommerce de Cerámicas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este proyecto de ecommerce de cerámicas utiliza las siguientes tecnologías:
+
+- React
+- Firebase
+- Yup
+- Formik
+- Material-UI (MUI)
+
+Estas tecnologías se utilizan para crear una experiencia de compra en línea para productos de cerámica hechos a mano. Consulta la documentación específica de cada tecnología para obtener más detalles sobre su implementación en el proyecto.

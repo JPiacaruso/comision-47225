@@ -50,8 +50,6 @@ function ResponsiveAppBar() {
     <Link to="cart" style={{ textDecoration: "none" }}>
       Mi Carrito
     </Link>,
-    "Mis Compras",
-    "Historial",
     "Cerrar Sesión",
   ];
   const [anchorElNav, setAnchorElNav] = React.useState(null);

@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAvUUM3zSxgnM-aOk1ChCf4-4_eYbJ13dk",
-  authDomain: "piantao-ceramicas.firebaseapp.com",
-  projectId: "piantao-ceramicas",
-  storageBucket: "piantao-ceramicas.appspot.com",
-  messagingSenderId: "334313525718",
-  appId: "1:334313525718:web:bbc2f2fd6e31f8fb6e5477",
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH,
+  projectId: import.meta.env.VITE_PROJECTED,
+  storageBucket: import.meta.env.VITE_STORAGE,
+  messagingSenderId: import.meta.env.VITE_MESSAGING,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
