@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CounterPresentacional from "./counterPresentacional";
+import CounterPresentacional from "./CounterPresentacional.jsx";
 
 const CounterContainer = ({ stock, onAdd, initial = 1 }) => {
   const [contador, setContador] = useState(initial);

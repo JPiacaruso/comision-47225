@@ -14,7 +14,6 @@ const ItemList = ({ items }) => {
     >
       <Box
         display={"flex"}
-        // component="section"
         flexDirection={"row"}
         justifyContent={"space-evenly"}
         flexWrap={"wrap"}

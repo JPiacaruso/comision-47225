@@ -32,12 +32,7 @@ const Cart = () => {
 
   return (
     <>
-      <Grid
-        container
-        fullWidth
-        display={"flex"}
-        justifyContent={"space-around"}
-      >
+      <Grid container display={"flex"} justifyContent={"space-around"}>
         <Grid item xs={12} md={8}>
           {cart.map((product) => (
             <Grid

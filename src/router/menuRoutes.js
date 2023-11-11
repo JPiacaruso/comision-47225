@@ -2,7 +2,6 @@ import Cart from "../components/pages/cart/Cart";
 import CheckoutOficial from "../components/pages/checkoutOficial/CheckoutOficial";
 import ItemDetailContainer from "../components/pages/itemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "../components/pages/itemListContainer/ItemListContainer";
-import Login from "../components/pages/login/Login";
 
 export const routes = [
   {

@@ -2,7 +2,7 @@ import ItemList from "./ItemList";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Skeleton from "@mui/material/Skeleton";
-import { getDocs, collection, query, where, addDoc } from "firebase/firestore";
+import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
 
 const ItemListContainer = () => {
