@@ -9,18 +9,18 @@ const CartContextComponent = ({ children }) => {
   const addToCart = (product) => {
     let exist = isInCart(product.id);
     if (exist) {
-      let newArray = cart.map((elemento) => {
+      let newArr = cart.map((elemento) => {
         if (elemento.id === product.id) {
           return {
             ...elemento,
-            quantity: product.quantity,
+            quantity: product.quantity + product.quantity,
           };
         } else {
           return elemento;
         }
       });
-      setCart(newArray);
-      localStorage.setItem("cart", JSON.stringify(newArray));
+      setCart(newArr);
+      localStorage.setItem("cart", JSON.stringify(newArr));
     } else {
       setCart([...cart, product]);
       localStorage.setItem("cart", JSON.stringify([...cart, product]));
@@ -51,7 +51,7 @@ const CartContextComponent = ({ children }) => {
 
   const getTotalPrice = () => {
     let total = cart.reduce((acc, elemento) => {
-      return acc + elemento.quantity * elemento.price;
+      return acc + elemento.price * elemento.quantity;
     }, 0);
 
     return total;

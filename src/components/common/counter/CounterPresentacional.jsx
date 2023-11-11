@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Box, Button, Container } from "@mui/material";
 
 const CounterPresentacional = ({ sumar, restar, contador, onAdd }) => {

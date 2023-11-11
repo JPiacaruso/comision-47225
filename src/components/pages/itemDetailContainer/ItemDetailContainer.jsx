@@ -24,12 +24,12 @@ const ItemDetailContainer = () => {
   }, [id]);
 
   const onAdd = (cantidad) => {
-    let product = {
+    let item = {
       ...productSelected,
       quantity: cantidad,
     };
 
-    addToCart(product);
+    addToCart(item);
 
     Swal.fire({
       position: "center",

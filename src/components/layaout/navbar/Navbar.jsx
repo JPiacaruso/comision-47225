@@ -15,26 +15,6 @@ import MenuItem from "@mui/material/MenuItem";
 import { CartWidget } from "../../common/cartwidget/CartWidget";
 
 function ResponsiveAppBar() {
-  let arr = [
-    {
-      id: 1,
-      name: "todas",
-      path: "/",
-    },
-
-    {
-      id: 2,
-      name: "artDeco",
-      path: "/category/artDeco",
-    },
-
-    {
-      id: 3,
-      name: "deAutor",
-      path: "/category/deAutor",
-    },
-  ];
-
   const pages = [
     <Link to="/category/deAutor" style={{ textDecoration: "none" }}>
       De Autor
