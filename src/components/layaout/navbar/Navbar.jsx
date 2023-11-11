@@ -167,7 +167,7 @@ function ResponsiveAppBar() {
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
+              <Tooltip title="Ir a Carrito">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <CartWidget />
                 </IconButton>

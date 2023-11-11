@@ -1,0 +1,10 @@
+.mensajeBienvenida {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(230, 151, 94);
+}
+
+p {
+  color: black;
+  margin-left: 10px;
+}

@@ -1,4 +1,14 @@
 import React, { useContext, useState } from "react";
+import {
+  TextField,
+  Button,
+  Box,
+  Typography,
+  Grid,
+  Container,
+  CardContent,
+  Card,
+} from "@mui/material";
 import { CartContext } from "../../../context/CartContext";
 import { db } from "../../../firebaseConfig";
 import {
@@ -15,6 +25,7 @@ const CheckoutOficial = () => {
     name: "",
     phone: "",
     email: "",
+    apellido: "",
   });
 
   const [orderId, setOrderId] = useState(null); // Inicialmente, orderId es null
@@ -30,6 +41,8 @@ const CheckoutOficial = () => {
   const handleSubmit = (evento) => {
     evento.preventDefault();
 
+    console.log("Entrando en handleSubmit");
+
     let order = {
       buyer: userData,
       items: cart,
@@ -39,14 +52,15 @@ const CheckoutOficial = () => {
 
     const ordersCollection = collection(db, "orders");
 
-    addDoc(ordersCollection, order).then((res) => setOrderId(res.id));
-
-    cart.forEach((elemento) => {
-      let refDoc = doc(db, "products", elemento.id);
-      updateDoc(refDoc, { stock: elemento.stock - elemento.quantity });
+    addDoc(ordersCollection, order).then((res) => {
+      console.log("Orden agregada:", res);
+      setOrderId(res.id);
+      cart.forEach((elemento) => {
+        let refDoc = doc(db, "products", elemento.id);
+        updateDoc(refDoc, { stock: elemento.stock - elemento.quantity });
+      });
+      clearCart();
     });
-
-    clearCart();
   };
 
   return (
@@ -57,27 +71,84 @@ const CheckoutOficial = () => {
           <Link to="/">Seguir Comprando</Link>
         </div>
       ) : (
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Ingresa Tu nombre"
-            name="name"
-            onChange={handleChange}
-          ></input>
-          <input
-            type="text"
-            placeholder="Ingresa Tu teléfono"
-            name="phone"
-            onChange={handleChange}
-          ></input>
-          <input
-            type="text"
-            placeholder="Ingresa Tu email"
-            name="email"
-            onChange={handleChange}
-          ></input>
-          <button type="submit">Comprar</button>
-        </form>
+        <Container fullWidth>
+          <Typography gutterBottom variant="h5" align="center" margin={4}>
+            Formulario de Compra
+          </Typography>
+          <Card
+            style={{
+              maxWidth: 450,
+              margin: "0 auto",
+              padding: "20px 5px",
+            }}
+          >
+            <CardContent>
+              <Typography gutterBottom variant="h5">
+                Registro
+              </Typography>
+              <Typography variant="body2" component="p" color="textSecondary">
+                Rellene el formulario.
+              </Typography>
+              <form onSubmit={handleSubmit}>
+                <Grid container spacing={1}>
+                  <Grid xs={12} sm={6} item>
+                    <TextField
+                      type="text"
+                      label="Nombre"
+                      variant="outlined"
+                      placeholder="Ingresa tu nombre"
+                      name="name"
+                      onChange={handleChange}
+                      fullWidth
+                      required
+                    />
+                  </Grid>
+                  <Grid xs={12} sm={6} item>
+                    <TextField
+                      type="text"
+                      label="Apellido"
+                      variant="outlined"
+                      placeholder="Ingresa tu Apellido"
+                      name="apellido"
+                      onChange={handleChange}
+                      fullWidth
+                      required
+                    />
+                  </Grid>
+                  <Grid xs={12} item>
+                    <TextField
+                      type="number"
+                      label="Telefono"
+                      variant="outlined"
+                      placeholder="Ingresa Tu teléfono"
+                      name="phone"
+                      onChange={handleChange}
+                      fullWidth
+                      required
+                    />
+                  </Grid>
+                  <Grid xs={12} item>
+                    <TextField
+                      type="email"
+                      label="Email"
+                      variant="outlined"
+                      placeholder="Ingresa Tu email"
+                      name="email"
+                      onChange={handleChange}
+                      fullWidth
+                      required
+                    />
+                  </Grid>
+                  <Grid xs={12} item>
+                    <Button variant="outlined" type="submit" fullWidth>
+                      Comprar
+                    </Button>
+                  </Grid>
+                </Grid>
+              </form>
+            </CardContent>
+          </Card>
+        </Container>
       )}
     </>
   );

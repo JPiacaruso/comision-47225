@@ -13,7 +13,6 @@ const ItemDetailContainer = () => {
 
   const { addToCart, getQuantityById } = useContext(CartContext);
   let totalQuantity = getQuantityById(id);
-  // console.log(totalQuantity);
 
   useEffect(() => {
     let itemCollection = collection(db, "products");
@@ -25,9 +24,6 @@ const ItemDetailContainer = () => {
   }, [id]);
 
   const onAdd = (cantidad) => {
-    console.log("Se agregó al carrito", productSelected);
-    console.log(cantidad);
-
     let product = {
       ...productSelected,
       quantity: cantidad,

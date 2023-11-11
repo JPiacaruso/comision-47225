@@ -1,6 +1,7 @@
 import React from "react";
 import ResponsiveAppBar from "./navbar/Navbar";
-import Footer from "./footer/Footer";
+// import Footer from "./footer/Footer";
+import FooterFinal from "./footer/FooterFinal";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
@@ -13,7 +14,7 @@ const Layout = () => {
         <Outlet />
       </div>
       <div>
-        <Footer />
+        <FooterFinal />
       </div>
     </div>
   );

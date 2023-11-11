@@ -13,3 +13,7 @@ Este proyecto de ecommerce de cerámicas utiliza las siguientes tecnologías:
 - Material-UI (MUI)
 
 Estas tecnologías se utilizan para crear una experiencia de compra en línea para productos de cerámica hechos a mano. Consulta la documentación específica de cada tecnología para obtener más detalles sobre su implementación en el proyecto.
+
+```
+npm run dev
+```

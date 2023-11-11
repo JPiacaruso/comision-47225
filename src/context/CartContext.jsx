@@ -11,7 +11,6 @@ const CartContextComponent = ({ children }) => {
     if (exist) {
       let newArray = cart.map((elemento) => {
         if (elemento.id === product.id) {
-          // Cambia "elemento === product.id" a "elemento.id === product.id"
           return {
             ...elemento,
             quantity: product.quantity,
@@ -44,15 +43,11 @@ const CartContextComponent = ({ children }) => {
     localStorage.removeItem("cart");
   };
 
-  // poder borrar un elemento particular del carrito
   const deleteProductById = (id) => {
-    console.log("El id es: ", id);
     let newArr = cart.filter((product) => product.id !== id);
     setCart(newArr);
     localStorage.setItem("cart", JSON.stringify(newArr));
   };
-
-  // obtener total carrito
 
   const getTotalPrice = () => {
     let total = cart.reduce((acc, elemento) => {
@@ -61,8 +56,6 @@ const CartContextComponent = ({ children }) => {
 
     return total;
   };
-
-  // obtener la cantidad de elementos
 
   const getTotalQuantity = () => {
     let total = cart.reduce((acc, elemento) => {

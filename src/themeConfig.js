@@ -4,12 +4,12 @@ export const customTheme = createTheme({
   palette: {
     primary: {
       main: "#d87d4a",
-      secondary: "crimson",
+      secondary: "#CC646A",
     },
 
     secondary: {
       main: "#fbaf85",
-      secondary: "crimson",
+      secondary: "#AE8131",
     },
   },
 });

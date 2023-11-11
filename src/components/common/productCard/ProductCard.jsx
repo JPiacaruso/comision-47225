@@ -5,38 +5,49 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  colors,
 } from "@mui/material";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ item }) => {
   return (
-    <Card sx={{ maxWidth: 300 }}>
+    <Card
+      sx={{
+        maxWidth: "300px",
+        maxHeight: "Auto",
+        boxShadow: "5",
+        backgroundColor: "rgb(236, 240, 241)",
+      }}
+    >
       <CardMedia
         component="img"
         alt="image ${item.title}"
-        maxWidth="100"
-        height="180"
+        height="230"
         image={item.img}
       />
-      <CardContent>
-        <Typography
-          gutterBottom
-          variant="h5"
-          component="div"
-          textAlign="center"
-        >
+      <CardContent
+        sx={{
+          backgroundColor: "rgb(236, 240, 241)",
+          height: "240px",
+        }}
+      >
+        <Typography gutterBottom variant="h5" textAlign="center">
           {item.title}
         </Typography>
-        <Typography variant="h7" color="text.secondary" textAlign="center">
+        <Typography
+          display="flex"
+          variant="h7"
+          color="text.secondary"
+          textAlign="center"
+          marginBottom="10px"
+        >
           {item.description}
         </Typography>
         <Typography
           variant="body1"
           color="text.primary"
-          textAlign="center"
           marginTop="10px"
+          textAlign="center"
         >
           $ {item.price} .-
         </Typography>
