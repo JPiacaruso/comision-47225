@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Swal from "sweetalert2";
+import { Box } from "@mui/material";
 import "./Login.css";
 
 const Login = () => {
@@ -47,15 +48,15 @@ const Login = () => {
   };
 
   return (
-    <div className="mensajeBienvenida">
+    <Box className="mensajeBienvenida">
       {nombreUsuario ? (
-        <p>¡Bienvenido/a! + {nombreUsuario}</p>
+        <p>¡Bienvenido/a! {nombreUsuario}</p>
       ) : (
-        <button onClick={handleLogin}>Iniciar Sesión</button>
+        <button onClick={handleLogin}>Ingrese su Nombre</button>
       )}
 
       {showLoginDialog && handleLogin()}
-    </div>
+    </Box>
   );
 };
 
