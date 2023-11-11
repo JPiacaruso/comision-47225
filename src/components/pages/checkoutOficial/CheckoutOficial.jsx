@@ -40,8 +40,6 @@ const CheckoutOficial = () => {
   const handleSubmit = (evento) => {
     evento.preventDefault();
 
-    console.log("Entrando en handleSubmit");
-
     let order = {
       buyer: userData,
       items: cart,
@@ -52,7 +50,6 @@ const CheckoutOficial = () => {
     const ordersCollection = collection(db, "orders");
 
     addDoc(ordersCollection, order).then((res) => {
-      console.log("Orden agregada:", res);
       setOrderId(res.id);
       cart.forEach((elemento) => {
         let refDoc = doc(db, "products", elemento.id);
