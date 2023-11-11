@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Grid,
-  IconButton,
-  Typography,
-  autocompleteClasses,
-  colors,
-} from "@mui/material";
+import { Box, Button, Grid, IconButton, Typography } from "@mui/material";
 import { Image } from "mui-image";
 import { useContext } from "react";
 import { Link } from "react-router-dom";

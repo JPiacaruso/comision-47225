@@ -1,7 +1,6 @@
 import React from "react";
 import "./FooterFinal.css";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { Box, Typography } from "@mui/material";
 
 const FooterFinal = () => {
   return (

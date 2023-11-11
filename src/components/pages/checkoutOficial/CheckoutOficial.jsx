@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import {
   TextField,
   Button,
-  Box,
   Typography,
   Grid,
   Container,
@@ -80,6 +79,7 @@ const CheckoutOficial = () => {
               maxWidth: 450,
               margin: "0 auto",
               padding: "20px 5px",
+              marginBottom: "40px",
             }}
           >
             <CardContent>

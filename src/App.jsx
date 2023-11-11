@@ -3,13 +3,13 @@ import { ThemeProvider } from "@emotion/react";
 import { customTheme } from "./themeConfig";
 import AppRouter from "./router/AppRouter";
 import CartContextComponent from "./context/CartContext";
-// import Login from "./components/pages/login/Login";
+import Login from "./components/pages/login/Login";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        {/* <Login /> */}
+        <Login />
         <ThemeProvider theme={customTheme}>
           <CartContextComponent>
             <AppRouter />
