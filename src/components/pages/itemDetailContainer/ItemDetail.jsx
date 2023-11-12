@@ -29,6 +29,7 @@ export const ItemDetail = ({
           padding: 2,
           borderRadius: 2,
           border: 1,
+          backgroundColor: "rgb(236, 240, 241)",
         }}
       >
         <Box>

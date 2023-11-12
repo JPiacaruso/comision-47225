@@ -1,5 +1,5 @@
 .footer {
-  background-color: #fbaf85;
+  background-color: #ecbfb5;
   padding-top: 1rem;
 }
 
@@ -137,7 +137,7 @@ a:hover {
 
   .sb_footer-below {
     flex-direction: column;
-    justify-content: left;
+    align-items: flex-start;
   }
 
   .sb_footer-below-links {
